@@ -125,16 +125,26 @@ ssh -i "resume_site_key.pem" ec2-user@ec2-3-107-39-232.ap-southeast-2.compute.am
 -------------------------
 
 Install http server using ssh 
-        sudo dnf update -y
-        sudo dnf install httpd -y
-        sudo systemctl start httpd
-        sudo systemctl enable httpd
-        sudo systemctl status httpd
+        $ sudo dnf update -y
+        $ sudo dnf install httpd -y
+        $ sudo systemctl start httpd
+        $ sudo systemctl enable httpd
+        $ Ctrl+C
+        $ sudo systemctl status httpd
 Deploy or create your web site or web page 
-    /var/www/html
-    - index.html 
+    $ cd /var/www/html
+    $ sudo nano index.html 
+    ---------------------------------
         <h1>I am from NIE</h1>
-open your public ip in the browser using "http" not https.
+    ---------------------------------
+    Ctrl+O              to save 
+    File Name to Write index.html <Enter>
+    Ctrl+X              to exit 
+    $ cat index.html 
+    It will display the contents of the index.html
+
+open "your public ip" of the instance in the browser using "http" not https.
+Example:    http://<your_public_ip>
 
 -------------------------
 Clean up:
