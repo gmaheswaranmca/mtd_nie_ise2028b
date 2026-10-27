@@ -1,0 +1,17 @@
+AWS Console Account Creation 
+    - Access to AWS Console 
+        - Work AWS Services + Resources 
+
+AWS : Amazon Web Services
+    Cloud from Amazon 
+    - Most popular cloud provider 
+
+Cloud ? 
+    Rental of Cloud Service 
+        IaaS - Infrastructure -> Compute, Storage, OS, Network + Internet 
+        PaaS - Platform -> IaaS + Runtime (Platform)
+        SaaS - Software -> PaaS + Software on the Runtime 
+
+        Pay as you go model 
+
+    network -> distributed network -> cluster -> cloud 

@@ -1,0 +1,92 @@
+Working with EC2:
+
+EC2 -> virtual server
+
+virtual server + Amazon Linux + Web Server + Static Web Site 
+
+1. EC2 Server Launch / Setup 
+2. Deploy basic static web site 
+    -> server becoming web server 
+
+
+Procedure 
+1. Search in the console "EC2"
+2. Left Side Menu Bar -> Instances category 
+-> Instances -> Instances Page will be opened 
+3. Click <Launch Instances> Button 
+4. Launch an Instance Page will be opened 
+5. Attributes of the Instances 
+    Name : resume_site_server
+    AMI: Amazon Linux 
+
+Ignore the procedure 
+
+Procedure Outlined: 
+    Key Pair: resume_site_key
+    Security Group: resume_site_sg 
+    Instance: resume_site_key + resume_site_sg + all other attr 
+
+Procedure: 
+1. Create Key Pair 
+Search EC2 -> Left Side Menu Bar 
+-> Networks & Security category -> Key Pairs 
+-> Key pairs List Page will be opened 
+-> Click "Create Key Pair" Button 
+-> Create key pair page is opened 
+-> Attr 
+    Name: resume_site_key  
+    Key pair type: RSA (By Default)
+    file format: .pem (By Default)
+        OpenSSH 
+-> Click "Create Key Pair" Button 
+-> ! Successfully created key pair
+-> We can see the created key pair in list page 
+2. Create Security Group 
+Search EC2 -> Left Side Menu Bar 
+-> Networks & Security category -> Security Groups 
+-> Security Groups List page is opened 
+-> Click "Create Security Group" button 
+-> Create security group page is opened 
+-> Attr 
+    Security group name: resume_site_sg
+    Description: resume_site_sg
+-> Inbound Rules 
+    Type: SSH 22 | Source type : Anywhere IPv4 (0.0.0.0/0)
+    Type: HTTP 80 | Source type : Anywhere IPv4 (0.0.0.0/0)
+-> Outbound Rules 
+    Keep as it is 
+    All Traffice | Anywhere IPv4 
+-> Click "Create Security Group" button
+! Security Group is created 
+-> Check in Security Group List page 
+-> Go into Security Group page 
+    -> Check the inbound and outbound rules 
+3. Launch EC2 Instance 
+    -> Search in the console "EC2"
+    -> Left Side Menu Bar -> Instances category 
+    -> Instances -> Instances Page will be opened 
+    -> Click <Launch Instances> Button 
+    -> Launch an Instance Page will be opened 
+    -> Attributes of the Instances 
+        Number of instances: 1 (By Default)
+        Name : resume_site_server
+        AMI: Amazon Linux (By Default)
+        Instance type : t3.micro Free Tier (By Default)
+        Key pair: resume_site_key
+        Network settings: default vpc 
+            Select Security Group: resume_site_sg
+        Configure storage: 8 GiB gp3 (By Default)
+    -> Click "Launch Instance" button 
+    ! Successfully initiated launch of instance  (i-075468ce890fe030d)
+    -> Instances List Page 
+        Check 
+            Instance state: Running 
+            Status check: Initilizing ->
+                          3/3 checks passed
+
+
+Clean up:
+1. Terminate Instance resume_site_server
+2. Delete Security Group resume_site_sg 
+3. Delete Key Pair resume_site_key 
+    Delete the actual key file from Downloads dir 
