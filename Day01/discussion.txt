@@ -15,3 +15,14 @@ Cloud ?
         Pay as you go model 
 
     network -> distributed network -> cluster -> cloud 
+
+
+----------------
+
+Lab - Ex01 
+    Dir: /Lab/Ex01/ex01-working-with-ec2.txt
+    Statement: "Working with EC2 
+        to work with linux using SSH
+        to deploy static web site"
+
+----------------
