@@ -23,6 +23,7 @@ Lab - Ex01
     Dir: /Lab/Ex01/ex01-working-with-ec2.txt
     Statement: "Working with EC2 
         to work with linux using SSH
+            to install apache web server and start the server 
         to deploy static web site"
 
 ----------------

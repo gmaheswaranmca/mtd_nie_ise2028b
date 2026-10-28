@@ -1,0 +1,138 @@
+Title: Working with EC2 to be as "static web site hosting"
+
+What is EC2? virtual server
+What is Security Group? virtual firewall
+What is SSH? SSH stands for secure shell. To work with shell from remote terminal to server linux shell securely.
+
+To dos: 
+1. EC2 Server Launch / Setup
+2. Install the httpd (apache server) and start and enable the server 
+3. Create or Deploy basic static web site 
+-> 
+Server becoming Web Server where basic web site is deployed and up and running for customers usage. 
+ 
+ 
+Services / Resources Created (Outlined):
+    - Key Pair: name=resume_site_key, RSA, .pem        
+    - Security Group: name=resume_site_sg, description=resume_site_sg,
+        - Inbound Rules: 1. SSH 22 AnywhereIPv4, 2. HTTP 80 AnywhereIPv4
+        - Outbound Rules: 1. All Traffic AnywhereIPv4
+    - Instance: name=resume_site_server, amazon linux, t3.micro, 
+            key pair=resume_site_key, security group=resume_site_sg
+
+Procedure: 
+1. Create Key Pair 
+    -> Search EC2 -> Left Side Menu Bar 
+    -> Networks & Security category -> Key Pairs 
+    -> Key pairs List Page will be opened 
+    -> Click "Create Key Pair" Button 
+    -> Create key pair page is opened 
+    -> Attr 
+        Name: resume_site_key  
+        Key pair type: RSA (By Default)
+        file format: .pem (By Default)
+            OpenSSH 
+    -> Click "Create Key Pair" Button 
+    -> ! Successfully created key pair
+    -> We can see the created key pair in list page 
+2. Create Security Group 
+    -> Search EC2 -> Left Side Menu Bar 
+    -> Networks & Security category -> Security Groups 
+    -> Security Groups List page is opened 
+    -> Click "Create Security Group" button 
+    -> Create security group page is opened 
+    -> Attr 
+        Security group name: resume_site_sg
+        Description: resume_site_sg
+    -> Inbound Rules 
+        Type: SSH 22 | Source type : Anywhere IPv4 (0.0.0.0/0)
+        Type: HTTP 80 | Source type : Anywhere IPv4 (0.0.0.0/0)
+    -> Outbound Rules 
+        Keep as it is 
+        All Traffice | Anywhere IPv4 
+    -> Click "Create Security Group" button
+    ! Security Group is created 
+    -> Check in Security Group List page 
+    -> Go into Security Group page 
+        -> Check the inbound and outbound rules 
+3. Launch EC2 Instance 
+    -> Search in the console "EC2"
+    -> Left Side Menu Bar -> Instances category 
+    -> Instances -> Instances Page will be opened 
+    -> Click <Launch Instances> Button 
+    -> Launch an Instance Page will be opened 
+    -> Attributes of the Instances 
+        Number of instances: 1 (By Default)
+        Name : resume_site_server
+        AMI: Amazon Linux (By Default)
+        Instance type : t3.micro Free Tier (By Default)
+        Key pair: resume_site_key
+        Network settings: default vpc 
+            Select Security Group: resume_site_sg
+        Configure storage: 8 GiB gp3 (By Default)
+    -> Click "Launch Instance" button 
+    ! Successfully initiated launch of instance  (i-075468ce890fe030d)
+    -> Instances List Page 
+        Check 
+            Instance state: Running 
+            Status check: Initilizing ->
+                          3/3 checks passed
+4. Connecting to Linux using Web Browser Client
+    Go to instance -> Connect 
+    -> In web Browser 
+    -> (select) EC2 Instance Connect
+    -> Connect command in bottom right side 
+    Now we will be connected to server computer 
+    Check the below cmds 
+    $ pwd           -> displays the present working dir  
+    $ whoami        -> display the current user 
+    $ ls            -> list the contents of the current dir 
+    $ ls /          -> list the contents if root dir 
+    $ exit 
+    Close the connection (browser tab) 
+
+5. Connecting to Linux using SSH Client
+    -> Go into instance -> Connect 
+    -> We will be into the "Connect to Linux instance" page 
+    -> In SSH Client section / tab 
+    -> From "How to connect"
+    -> Under pt "4. Connect to your instance using its Public DNS"
+    -> Copy ssh command: 
+    ssh -i "resume_site_key.pem" ec2-user@ec2-3-107-39-232.ap-southeast-2.compute.amazonaws.com
+    -> Go to the downloads dir from browser 
+        -> Go to the folder for the key file 
+            -> Right Click -> Open in Terminal 
+            -> goto key file dir. run the ssh cmd.  
+            -> yes/no/fingerprint? yes 
+            -> Try below cmds 
+                $ pwd 
+                $ whoami 
+
+6. Install http server using ssh 
+    $ sudo dnf update -y
+    $ sudo dnf install httpd -y
+    $ sudo systemctl start httpd
+    $ sudo systemctl enable httpd
+    $ Ctrl+C
+    $ sudo systemctl status httpd
+    ! Deploy or create your web site or web page 
+    $ cd /var/www/html
+    $ sudo nano index.html 
+    ---------------------------------
+        <h1>I am from NIE</h1>
+    ---------------------------------
+    Ctrl+O              to save 
+    File Name to Write index.html <Enter>
+    Ctrl+X              to exit 
+    ---------------------------------
+    $ cat index.html 
+    It will display the contents of the index.html
+
+    Open "your public ip" of the instance in the browser using "http" ie "not https".
+    Example:    http://<your_public_ip>
+
+7. Clean up:
+    -> Terminate Instance "resume_site_server"
+    -> Delete Security Group "resume_site_sg" 
+    -> Delete Key Pair "resume_site_key" 
+            -> Delete the actual key file from "Downloads" dir 
