@@ -1,0 +1,59 @@
+Deployment of Static Web Site with S3 
+
+1. Create Bucket 
+-> Search "S3" -> Click "Create Bucket" 
+-> Bucket type: General Purpose 
+-> Bucket namespace: Global Namespace 
+-> Bucket name: mtd-maheswaran-trainer
+-> Object Ownership: ACLs disabled 
+-> Untick "Block all public access"
+-> Tick "I  acknowledge that the current settings might result in this bucket and the objects within becoming public"
+-> Bucket Versioning  : Enable 
+-> Create Bucket 
+
+Bucket is created 
+
+2. Upload files to bucket 
+-> Go into bucket -> Objects -> Click Upload
+-> Drag and Drop the files and folders to be uploaded 
+into "Drag and Drop" section 
+-> Click "Upload" 
+-> Click "Close" to go back to Objects Section 
+
+3. To view the file 
+Under Objects -> Select the file -> Open 
+
+or 
+
+Click the file link -> Open 
+
+4. To see the versions of the file 
+Do changes in the file 
+-> Upload again the file 
+-> Under Objects -> Click the file link 
+-> Versioning -> Tree of files will be there 
+-> Top file is the latest one and all others are old versions 
+-> Select each version -> Open 
+
+5. Deployment preparation 
+-> Go into bucket -> Section "Properties"
+-> Static website hosting
+    -> Edit -> "Edit static website hosting" page is opened 
+    -> (Tick) Enable "Static website hosting"
+    -> Index document: index.html 
+    -> Save Changes 
+
+    We are ready to host our web site using amplify 
+
+---------------------------------------------------
+Deployment is demonstrated in another file 
+    ex03-3-amplify-deploy.txt 
+---------------------------------------------------
+
+6. Clean up 
+Go to list of buckets page 
+-> Select the bucket 
+-> Empty -> Confirmation Message -> Empty 
+Bucket is emptied.
+-> Select the bucket from buckets list page 
+-> Delete -> Confimration Message -> Delete Bucket 

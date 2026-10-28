@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maheswaran Govindaraju - Resume</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b4c5e', // Dark slate/navy blue
+                        accent: '#e63946', // Vibrant red
+                        accentLight: '#fcebe3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for language circular progress */
+        .progress-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: conic-gradient(#e63946 var(--progress), #6b7a8a 0deg);
+        }
+        .progress-circle-inner {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background-color: #3b4c5e; /* Matches right column bg */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 py-0 md:py-10 text-gray-800 antialiased selection:bg-accent selection:text-white">
+
+    <!-- Resume Container -->
+    <div class="max-w-[1100px] mx-auto bg-white min-h-screen md:shadow-2xl md:rounded-lg overflow-hidden flex flex-col md:flex-row">
+        
+        <!-- Left Column (65%) -->
+        <div class="w-full md:w-[65%] p-8 md:p-12">
+            
+            <!-- Header -->
+            <header class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/160x160/e2e8f0/475569?text=MG" alt="Maheswaran Govindaraju" class="w-32 h-32 rounded-full object-cover border-[3px] border-accent/20">
+                </div>
+                <div class="text-center sm:text-left pt-2">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 uppercase tracking-tight leading-tight">
+                        Maheswaran <br>
+                        Govindaraju
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold text-accent mt-2 tracking-wide">Technical Consultant</h2>
+                </div>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 border-b-2 border-gray-200 pb-2 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-user text-sm"></i>
+                    </div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-gray-800">Professional Summary</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed text-sm md:text-base text-justify">
+                    More than 2 Decades of experience in Software Development and Corporate Training. Domain Knowledge in ERP, Retail, Finance, Healthcare, HRM, Telecom. Expertise in .NET, J2EE, Angular, React, VueJS, Oracle, SQL Server, PHP, and C++ systems. Proven presenting and training skills mentoring developers and freshers for top companies like Quest Global, LnT Infotech, and Tata Elxsi.
+                </p>
+            </section>
+
+            <!-- Work Experience -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 border-b-2 border-gray-200 pb-2 mb-6">
+                    <div class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-briefcase text-sm"></i>
+                    </div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-gray-800">Work Experience</h3>
+                </div>
+
+                <!-- Job 1 -->
+                <div class="mb-6 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-lg font-bold text-gray-900">Technical Consultant</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> Feb 2019 - Present
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm mb-2">Self Employed and Freelancer</div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="mb-6 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-lg font-bold text-gray-900">Technical Director</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> Jan 2011 - Jan 2019
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm mb-2">Arts64 Tech</div>
+                    <ul class="list-none text-sm text-gray-600 space-y-1 mt-2">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-accent mt-1 text-xs"></i>
+                            Project Management Consulting and end-to-end execution.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-accent mt-1 text-xs"></i>
+                            Product Development from initiation to customization.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-right text-accent mt-1 text-xs"></i>
+                            Technical Team Organization and Human Resources software training.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="mb-6 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-lg font-bold text-gray-900">Project Manager</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> Jan 2009 - Dec 2010
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm mb-2">Sky Link Private Limited</div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="mb-2 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-lg font-bold text-gray-900">Project Manager</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> April 2007 - Dec 2008
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm mb-2">ASTRA Technology Solutions</div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-gray-200 pb-2 mb-6">
+                    <div class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-graduation-cap text-sm"></i>
+                    </div>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-gray-800">Education</h3>
+                </div>
+
+                <!-- Edu 1 -->
+                <div class="mb-5">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-base font-bold text-gray-900">Master of Business Administration</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> 2005
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm">Alagappa University</div>
+                </div>
+
+                <!-- Edu 2 -->
+                <div class="mb-5">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-base font-bold text-gray-900">Master of Computer Applications</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> 2002
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm">Bharathidasan University</div>
+                </div>
+
+                <!-- Edu 3 -->
+                <div class="mb-2">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+                        <h4 class="text-base font-bold text-gray-900">Bachelor of Science (Industrial Electronics)</h4>
+                        <div class="text-sm text-gray-500 font-medium flex items-center gap-1">
+                            <i class="fa-regular fa-calendar-days text-accent/80"></i> 1996
+                        </div>
+                    </div>
+                    <div class="text-accent font-medium text-sm">Bharathidasan University</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column (35%) -->
+        <div class="w-full md:w-[35%] p-8 md:p-10 bg-primary text-white">
+            
+            <!-- Contact Info -->
+            <section class="mb-10">
+                <ul class="space-y-4 text-sm font-medium">
+                    <li class="flex items-center gap-4 border-b border-white/20 pb-3">
+                        <i class="fa-solid fa-envelope text-white text-lg w-5 text-center"></i>
+                        <span>maheswaran@example.com</span>
+                    </li>
+                    <li class="flex items-center gap-4 border-b border-white/20 pb-3">
+                        <i class="fa-solid fa-phone text-white text-lg w-5 text-center"></i>
+                        <span>+91 (123) 456-7890</span>
+                    </li>
+                    <li class="flex items-center gap-4 border-b border-white/20 pb-3">
+                        <i class="fa-solid fa-location-dot text-white text-lg w-5 text-center"></i>
+                        <span>Tiruchirappalli, Tamil Nadu</span>
+                    </li>
+                    <li class="flex items-center gap-4 pb-1">
+                        <i class="fa-brands fa-linkedin text-white text-lg w-5 text-center"></i>
+                        <span>linkedin.com/in/maheswaran</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Skills -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 border-b border-white/30 pb-2 mb-5">
+                    <div class="w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-lightbulb text-accent text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-bold uppercase tracking-widest text-white">Skills</h3>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>J2EE & .NET</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-1.5">
+                            <div class="bg-accent h-1.5 rounded-full w-[95%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Angular & React</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-1.5">
+                            <div class="bg-accent h-1.5 rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Python & C++</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-1.5">
+                            <div class="bg-accent h-1.5 rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Software Architecture</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-1.5">
+                            <div class="bg-accent h-1.5 rounded-full w-[92%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interests -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 border-b border-white/30 pb-2 mb-5">
+                    <div class="w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-heart text-accent text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-bold uppercase tracking-widest text-white">Interests</h3>
+                </div>
+                <div class="grid grid-cols-1 gap-3 text-sm">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-chalkboard-user text-white opacity-80 w-4 text-center"></i> Corporate Training
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-sitemap text-white opacity-80 w-4 text-center"></i> Software Architecture
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-users text-white opacity-80 w-4 text-center"></i> Mentoring
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strengths -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 border-b border-white/30 pb-2 mb-5">
+                    <div class="w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-hand-fist text-accent text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-bold uppercase tracking-widest text-white">Strengths</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white text-primary px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-flag text-accent"></i> Leadership
+                    </span>
+                    <span class="bg-white text-primary px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-puzzle-piece text-accent"></i> Problem Solving
+                    </span>
+                    <span class="bg-white text-primary px-3 py-1.5 rounded text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-bolt text-accent"></i> Agile
+                    </span>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section>
+                <div class="flex items-center gap-3 border-b border-white/30 pb-2 mb-6">
+                    <div class="w-7 h-7 rounded-full bg-white text-primary flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-language text-accent text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-bold uppercase tracking-widest text-white">Languages</h3>
+                </div>
+                <div class="flex justify-around gap-4 text-center">
+                    
+                    <!-- Language 1 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="progress-circle" style="--progress: 100%;">
+                            <div class="progress-circle-inner font-semibold text-xs">
+                                100%
+                            </div>
+                        </div>
+                        <span class="text-sm font-medium tracking-wide">English</span>
+                    </div>
+
+                    <!-- Language 2 -->
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="progress-circle" style="--progress: 100%;">
+                            <div class="progress-circle-inner font-semibold text-xs">
+                                100%
+                            </div>
+                        </div>
+                        <span class="text-sm font-medium tracking-wide">Tamil</span>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <img src="images/students1.jpeg" alt="Students in Class Room"/>
+    <br/>
+    <img src="images/students2.jpeg" alt="Students in Class Room"/>
+</body>
+</html>

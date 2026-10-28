@@ -1,0 +1,38 @@
+s3 bucket:
+    files 
+        - index.html 
+        - images/
+            - students1.jpeg
+            - students2.jpeg 
+    public access - enable 
+        -> untick the public access 
+    enable static web site hosting 
+
+1. amplify hosting 
+    -> Search AWS Amplify 
+    -> Deploy an app 
+    -> Deploy without Git [Select]
+    -> Click Next 
+    -> App name: maheswaran_resume_site
+    -> method : Amazon s3 
+    -> Browser S3 -> Select bucket "mtd-mahesh-consultant"
+    -> Choose Prefix 
+    -> Save and Deploy 
+        -> Visit Deployed URL 
+            https://staging.d13y4wpboff60g.amplifyapp.com/
+
+
+2. Redeployment : To update the changes - into - deployment 
+    Goto your amplify app 
+    -> Overview -> Deploy updates 
+    -> Method: S3 Bucket 
+    -> Save and Deploy 
+    -> Visit Deployed URL 
+            https://staging.d13y4wpboff60g.amplifyapp.com/
+
+3. Delete Amplify App 
+    Go into app "maheswaran_resume_site"
+    -> Left Menu -> App Settings -> General Settings 
+    -> Click Delete app button under "Delete app" section 
+    -> Confirmation message 
+    -> Click Delete app button 
