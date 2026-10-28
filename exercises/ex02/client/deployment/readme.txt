@@ -1,7 +1,7 @@
 1. Update Linux + install Git + clone repository
-cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/deploy
-chmod +x cli1.sh
-./cli1.sh
+$ sudo dnf update -y
+$ sudo dnf install git -y
+$ git clone https://github.com/gmaheswaranmca/mtd_nie_ise2028b.git
 
 2. Install Apache + start + enable
 cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/deploy

@@ -1,7 +1,7 @@
 1. Update Linux + install Git + clone repository
-cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server/scripts
-chmod +x ser1.sh
-./ser1.sh
+$ sudo dnf update -y
+$ sudo dnf install git -y
+$ git clone https://github.com/gmaheswaranmca/mtd_nie_ise2028b.git
 
 2. Install Python + dependencies + start FastAPI silently
 cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server/scripts
