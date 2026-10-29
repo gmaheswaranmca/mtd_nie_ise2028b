@@ -70,6 +70,22 @@ Full Stack Application Deployment
                 $ cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/scrips
                 $ chmod +x cli2.sh
                 $ ./cli2.sh
+                To Check 
+                $ ls /var/www/html
+
+                Open frontend app in browser: 
+                    URL: http://your_public_ip_fronend_app
+                    Actual URL: http://
 3. Integration between backend and frontend apps 
-    In backend app, we have to setup the CORS fronend app url 
-    In fronend app, we have to update the API base url 
+    3.1 In backend app, we have to setup the CORS fronend app url 
+        cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server/scripts
+        chmod +x ser3.sh
+        ./ser3.sh http://frontend_ip
+
+        Actual cmd: ./ser3.sh http://15.134.185.92
+    3.2 In fronend app, we have to update the API base url 
+        cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/scripts
+        chmod +x cli3.sh
+        ./cli3.sh http://backend_ip:8000
+
+        Actual cmd: ./cli3.sh http://16.176.127.140:8000
