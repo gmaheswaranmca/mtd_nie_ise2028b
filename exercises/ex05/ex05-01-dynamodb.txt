@@ -1,0 +1,59 @@
+Working with DynamoDB - CRUD operations on DynamoDB Table 
+-> Search DynomoDB 
+-> Create Table cmd 
+-> Attr 
+    Table name: employees
+    Partition Key: id (Datatype: String)
+-> In bottom right corner Give "Create Table" cmd 
+
+! The employees table was created successfully.
+
+
+::CRUD operations with Table:employees::
+-> Table List page
+-> Go into the table  employees
+    ! Definition and to work definition level 
+-> Table List page
+    Select Table -> Actions -> Explore Items 
+1. Create Item
+    -> Items of the employees table 
+    -> Goto bottom of the page 
+    -> Create Item cmd 
+    id: E001
+    name (String): Rahul Dravid 
+    age (Number): 52
+    salary (Number): 570000
+
+    <Create Item>
+
+    We can see the created item in the items list.
+    One more item we will create 
+    E002, Sreyas Ayyar, 30, 1000000
+
+2. Edit Item 
+Select the item to be edited
+-> Actions - Edit 
+-> Change Rahul Dravid Salary from 570000 to 525000
+-> Save and Close 
+
+3. Scan 
+    All items | Filter items 
+
+    Filter items 
+
+    Add filter: age Less Than Number 40 -> Run 
+
+    Check Reset | Remove Filter
+
+4. Delete Item 
+   Select item Rahul Dravid 
+   -> Actions - Delete Items 
+   -> Confirmation 
+   -> Delete 
+   Deleted 
+
+Clean up
+Tables List -> Select table "employees"
+-> Delete
+-> Confirmation -> Delete 
+Table Deleted 

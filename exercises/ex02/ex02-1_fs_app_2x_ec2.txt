@@ -89,3 +89,15 @@ Full Stack Application Deployment
         ./cli3.sh http://backend_ip:8000
 
         Actual cmd: ./cli3.sh http://16.176.127.140:8000
+4. Cleanup
+    4.1. Terminate instances 
+        - app_server
+        - app_client 
+    4.2. Delete Security Groups 
+        - app_server_sg 
+        - app_client_sg 
+    4.3. Delete Key Pairs 
+        - app_server_key 
+        - app_client_key 
+
+        Delete physical key files also from "Donwloads" dir. 

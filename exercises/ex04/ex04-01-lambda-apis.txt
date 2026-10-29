@@ -1,0 +1,96 @@
+Steps to build basic API code from Lambda:
+-> Search Lambda 
+-> Create an Event Function 
+-> Create Event Function page is opened
+-> Author from scratch
+-> Attr:
+    Function name: hello
+    Runtime : Python 
+-> Create Event Function 
+-> "hello" function development IDE is opened 
+-> In Code: 
+    Default code is as follows:
+    ------------------------------------------
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+---------------------------------------------
+-> To test the code 
+    -> In Explorer of VSC 
+        -> Deploy
+            ! No Changes to deploy 
+-> "Test" tab of IDE 
+    -> Test in top right side 
+    -> The API is running and "Details" of the API in the beggining of the Test Page 
+    -> Expand the "Details"
+        is there response in the details section 
+            {
+            "statusCode": 200,
+            "body": "\"Hello from Lambda!\""
+            }
+
+
+::Change the Function Code:: 
+    Change the function code 
+        Hello from Lambda!
+        ->
+        Hello from Maheswaran!
+-------------------------------
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Maheswaran!')
+    }
+-------------------------------
+
+-> Deploy the function 
+-> Test the function
+{
+  "statusCode": 200,
+  "body": "\"Hello from Maheswaran!\""
+}
+
+=========================================================\
+Deployment of API to expose outside 
+    Consuming from outside lambda serverless 
+
+API Gateway is the solution.
+
+Steps:
+-> Top page of the hello function
+-> Add Trigger
+-> Add trigger page is opened
+-> Trigger configuration
+    Select API Gateway 
+    Intent: Create a new API
+    API Type: HTTP API
+    Security: Open 
+    -> Add 
+-> Check under Configuration tab 
+    -> API Gateway: hello-API is added 
+    -> Open API End Point in browser 
+         https://ljbcmiiuh4.execute-api.ap-southeast-2.amazonaws.com/default/hello
+
+         Response: "Hello from Maheswaran!"
+----------------------------------------------
+::Cleaup::
+    -> Goto Configuration of hello function 
+    -> Select APU Gateway "hello-API"
+    -> Delete 
+    Deleting...
+    -> Close 
+
+    -> Event Functions List page 
+    -> Select "hello" function 
+    -> Actions - Delete 
+    -> Confirmation Message 
+    Deleted 
+    

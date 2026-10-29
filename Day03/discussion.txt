@@ -6,4 +6,22 @@ AWS Console Login
     -> Serverless Storage / Frontend App Deployment - S3 
     -> Full Stack App Deployment 
         -> Backend Server + Backend App Deployment 
+
+Today:
+    -> Fronend Server + Frontend App Deployment - Completed 
+
+Services 
+    Lambda  -> Servless API Development                      ! Done 
+            -> Paas 
+    API Gateway -> To consume APIs from Lambda outside world ! Done 
+
+Database Services 
+    - Dynamo DB - No SQL ! Done 
+    - RDS MySQL 
+
+Amazon DynamoDB
+    A fast and flexible NoSQL database service for any scale
+    DynamoDB is a fully managed, key-value, and document database that delivers single-digit-millisecond performance at any scale.
         
+Partition key
+    The partition key is part of the table's primary key. It is a hash value that is used to retrieve items from your table and allocate data across hosts for scalability and availability.
