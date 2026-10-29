@@ -4,11 +4,11 @@ $ sudo dnf install git -y
 $ git clone https://github.com/gmaheswaranmca/mtd_nie_ise2028b.git
 
 2. Install Apache + start + enable
-cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/deploy
+cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/scripts
 chmod +x cli2.sh
 ./cli2.sh
 
 3. Update BASE_URL and restart Apache
-cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/deploy
+cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/scripts
 chmod +x cli3.sh
 ./cli3.sh http://3.110.50.20:8000

@@ -37,7 +37,8 @@ Full Stack Application Deployment
                 URL: http://your_public_ip:8000/docs
                 Actual URL:  http://16.176.127.140:8000/docs
                 
-        
+    
+
 
 2. Frontend Application Server (EC2)
     React app 
@@ -47,7 +48,7 @@ Full Stack Application Deployment
             security group: app_client_sg 
                 Inbound 
                     1. SSH 22, AnywhereIPv4
-                    2. TCP 8000, AnywhereIPv4
+                    2. HTTP 80, AnywhereIPv4
                 Outbound 
                     1. All Traffic, AnywhereIPv4
         2.2. Create Key Pair 
@@ -60,6 +61,15 @@ Full Stack Application Deployment
             up and run apache server 
             deploy the front end app 
             ...
+            2.4.1. Run below cmds:
+                $ sudo dnf update -y
+                $ sudo dnf install git -y
+                $ git clone https://github.com/gmaheswaranmca/mtd_nie_ise2028b.git
+                $ ls
+                Install Apache + start + enable + deployment 
+                $ cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/client/scrips
+                $ chmod +x cli2.sh
+                $ ./cli2.sh
 3. Integration between backend and frontend apps 
     In backend app, we have to setup the CORS fronend app url 
     In fronend app, we have to update the API base url 
