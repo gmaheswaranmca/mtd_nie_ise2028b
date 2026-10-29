@@ -8,6 +8,11 @@ cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server/scripts
 chmod +x ser2.sh
 ./ser2.sh
 
+to check:
+cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server
+tail -f app.log
+Ctrl+C 
+
 3. Update FRONTEND_URL and restart FastAPI
 cd /home/ec2-user/mtd_nie_ise2028b/exercises/ex02/server/scripts
 chmod +x ser3.sh

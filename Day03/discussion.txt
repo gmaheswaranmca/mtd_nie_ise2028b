@@ -1,0 +1,9 @@
+AWS Console Login
+    -> EC2 instance for static web site hosting wiht apache server 
+        -> Launch EC2 instance 
+        -> Deployment or Creation of web site in apache server 
+            -> using SSH
+    -> Serverless Storage / Frontend App Deployment - S3 
+    -> Full Stack App Deployment 
+        -> Backend Server + Backend App Deployment 
+        
