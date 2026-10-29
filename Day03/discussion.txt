@@ -25,3 +25,19 @@ Amazon DynamoDB
         
 Partition key
     The partition key is part of the table's primary key. It is a hash value that is used to retrieve items from your table and allocate data across hosts for scalability and availability.
+
+============================================
+Aurora and RDS
+    "Managed Relational Database Service"
+    "Amazon Relational Database Service (Amazon RDS) and Amazon Aurora are fully managed database services that simplify setup, operation, and scaling of relational databases in the cloud."
+
+    Engine Options: 
+        1. Aurora MySQL Compatibility
+        2. Aurora Postgres Compatibility
+
+        3. MySQL 
+        4. PostgreSQL
+        5. MariaDB 
+        6. Oracle 
+        7. Microsoft SQL Server
+        8. DB2 

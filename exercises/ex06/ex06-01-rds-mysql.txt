@@ -1,0 +1,49 @@
+To work with AWS RDS MySQL:
+-> Search RDS -> "Aurora and RDS"
+-> Left Menu -> Databases 
+-> In Create Database dropdown -> Full Configuration
+::Setting up MySQL:: 
+-> Pick MySQL
+-> Choose a database creation method :Easy create
+-> DB instance identifier: hrms-instance
+   Master username: admin 
+   Master password: 12345678
+-> Create Database 
+    Status 
+    !Creating ... ! Configuring-enhanced-monitoring...
+    !Backing-up... ! Available
+
+Connection String 
+    mysql -h hrms-instance.cxgww66qiwfi.ap-southeast-2.rds.amazonaws.com -P 3306 -u admin -p --ssl-mode=VERIFY_IDENTITY --ssl-ca=./global-bundle.pem
+
+host: hrms-instance.cxgww66qiwfi.ap-southeast-2.rds.amazonaws.com
+port: 3306
+username: admin
+password: 12345678
+
+=====================================================================
+
+::To work with MySQL::
+[] Workbench [] Client (MySQL CLI) [] Shell 
+
+Connection from MySQL Shell to open from terminal:
+mysqlsh admin@192.168.1.50
+
+
+From mysql shell: 
+\connect username@host 
+
+CONSTR: 
+\connect admin@hrms-instance.cxgww66qiwfi.ap-southeast-2.rds.amazonaws.com
+
+=====================================================================
+To try connection from EC2 instance 
+$ sudo dnf update -y
+$ sudo dnf install mariadb105 -y
+$ mysql --version
+$ curl -o global-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+::Change the host computer dns name::
+$ mysql -h hrms-instance.cxgww66qiwfi.ap-southeast-2.rds.amazonaws.com -P 3306 -u admin -p --ssl-mode=VERIFY_IDENTITY --ssl-ca=".\global-bundle.pem"
+=====================================================================
+
+
