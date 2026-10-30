@@ -37,7 +37,7 @@ CONSTR:
 \connect admin@hrms-instance.cxgww66qiwfi.ap-southeast-2.rds.amazonaws.com
 
 =====================================================================
-To try connection from EC2 instance (be_app + be_key + be_sg)
+To try connection from EC2 instance (be_app + be_key + be_sg[SSH])
 At db instance -> sg -> Inbound rule -> Add at source [be_sg]
 $ sudo dnf update -y
 $ sudo dnf install mariadb105 -y
