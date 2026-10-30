@@ -1,0 +1,63 @@
+CodeCommit - Repository 
+-> Search CodeCommit -> Create Repository 
+-> Repository Name: portfolio_site
+-> Create 
+Repo created 
+Try to create file in repo 
+Try to upload file to repo 
+
+Assignment: 
+1. Deployment of static web site from code commit 
+2. Deployment of static web site from github 
+
+=======================================
+
+CodeBuild - Build of applications 
+-> Search CodeBuild -> Build Project page is opened
+-> Create Project -> Project name: using_codebuild
+-> Project type: Default project
+-> Source provider: No Source 
+-> Build commands: echo "Hello World"
+-> Create Build Project 
+Project created 
+-> Start Build
+
+=======================================
+
+
+CodePipeline : CI/CD 
+
+Exercise: To deploy files from codecommit to s3 bucket automatically 
+1. Create s3 bucket 
+    -> Search S3 -> name: mtd-mahesh-work-files
+    -> Untick the Block Public Access     -> Create Bucket 
+2. Create codecommit - have initial files 
+    -> Create repo -> Have some files 
+    -> name: mtd-mahesh-work-files-repo
+    -> create first file :        task1.txt            "Task 1 is not defined yet."
+3. Create Pipeline to automate the updates in codecommit 
+    -> Search CodePipeline -> Create Pipeline -> 
+    -> Build custom pipeline -> next     
+    -> name: mtd-mahesh-work-files-pipes3
+        role: AWSCodePipelineServiceRole-ap-southeast-2-mtd-mahesh-work-files3 
+    -> next     -> Source provider: AWS CodeCommit, Repo name: mtd-mahesh-work-files-repo, 
+       Branch: main 
+    -> next     -> Build optional (not updated) -> cmd: echo "hello" -> next 
+    -> Test (optional) -> next 
+    -> Deploy -> Deploy provider: Amazon S3
+              -> bucket: mtd-mahesh-work-files
+              -> Tick: Extract file before deploy
+    -> Create Pipeline 
+4. Check the s3 bucket - the files in s3 updated from codecommit repo 
+   Do changes in repo -> check in s3 -> updated from codecommit repo to s3
+5. Cleanup :
+    Delete Pipeline 
+        -> Pipelinse list page -> Select Pipeline -> Delete Pipeline 
+    Delete Build Project 
+        -> Build Project List -> Select Build Project -> Actions -> Delete 
+    Delete CodeCommit Repository
+        -> Repositories List Page -> Select Repository -> Delete Repository
+    Delete S3 Bucket    
+        -> S3 Bucket List -> Select Bucket -> Empty -> Delete 
+    
+==============================================================

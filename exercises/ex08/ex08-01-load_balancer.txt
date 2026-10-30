@@ -1,0 +1,42 @@
+Load Balancer - Experiment
+Overview:
+    - Two EC2 instances for web site
+        -> site_servers :: no of instances=2 
+            -> site_servers_sg + site_servers_key  
+    - ALB : alb1
+        -> alb1_sg 
+        -> Target Group : tg1
+            tg1 will targest site_servers 
+
+Procedure:
+1. Security Group : site_servers_sg
+-> Search EC2 -> Security Groups -> Create Security Group 
+-> name: site_servers_sg 
+    Inbound Rules
+        1. SSH AnywhereIPv4
+        2. HTTP AnywhereIPv4
+2. Key Pair : site_servers_key
+3. EC2 instances = 2 = site_servers
+    security group = site_servers_sg
+    key pair: site_servers_key
+
+Advance Details -> User data
+============================================
+#!/bin/bash
+yum update -y
+yum install -y httpd
+
+systemctl start httpd
+systemctl enable httpd
+
+echo "<h1>Server is up and running!</h1>" > /var/www/html/index.html
+echo "<p>Hello from EC2 Instance - $(hostname -f)</p>" >> /var/www/html/index.html
+echo "<p>Date: $(date)</p>" >> /var/www/html/index.html
+==============================================
+Wait for status check 
+
+Then open the web site in browser:
+    1. http://first_instance_ip
+    2. http://second_instance_ip 
+    
+

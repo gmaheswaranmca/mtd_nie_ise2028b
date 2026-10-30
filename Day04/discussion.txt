@@ -1,0 +1,25 @@
+Overview:
+    -> EC2 + SSH    : server oriented
+    -> S3 + Static Web Site Hosting + Amplify App : Frontend - Serverless
+    -> Lambda + APIGateway : Backend - Serverless
+    -> NoSQL : DynamoDB
+    -> SQL / RDBMS : Aurora and RDS - RDS MySQL
+-----------------------------------------------------------
+CI / CD: pipelining
+
+    CodeCommit : Source Code 
+    CodeBuild : To build the software from Source code 
+    CodePipeline : CI / CD 
+
+Load Balancer
+    Elastic Load Balancing scales your load balancer capacity automatically in response to changes in incoming traffic.
+
+    vertically (increase capacity) / horizontally (increase number of instances)
+
+    To create the load balancer for our virtual server. 
+        - Static Web Site Web Server 
+            -> two web servers 
+            -> under load balancer
+            -> access via load balancer 
+
+        -> Loads will be distributed from LB to servers 
