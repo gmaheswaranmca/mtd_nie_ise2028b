@@ -1,0 +1,28 @@
+SNS - Lab 
+-> Left Menu -> topics List
+-> Create topic
+-> Type: Standard [Default]
+-> Name : Employee_Subscription
+-> Bottom Right Side 
+-> Create Topic cmd 
+Topic "Employee_Subscription.fifo" created 
+
+Use the Topic 
+-> Go into the Topic from list of topics 
+-> Create subscription
+-> Protocol: Email  
+-> Create Subscription 
+
+Check the mail : 
+Click the link "Confirm subscription" in the mail 
+"Confirm Subscription" from Amazon page 
+
+
+Goto Subscription page 
+check the Status=Pending -> Confirmed
+
+Cleanup: 
+    - Delete Subscriptions 
+    - Delete Topic 
+    
+

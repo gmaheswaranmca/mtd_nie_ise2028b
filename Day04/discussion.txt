@@ -23,3 +23,16 @@ Load Balancer
             -> access via load balancer 
 
         -> Loads will be distributed from LB to servers 
+=======================================
+CloudWatch
+    Monitor Resources and Applications
+
+SNS 
+    Amazon Simple Notification Service
+    - "Pub/sub messaging for microservices and serverless applications."
+    - Amazon SNS is a highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and event-driven serverless applications. Amazon SNS provides topics for high-throughput, push-based, many-to-many messaging.
+
+SQS 
+    Amazon SQS
+    - "A message queuing service"
+    - Amazon SQS provides queues for high-throughput, system-to-system messaging. You can use queues to decouple heavyweight processes and to buffer and batch work. Amazon SQS stores messages until microservices and serverless applications process them.

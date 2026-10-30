@@ -1,0 +1,8 @@
+CloudWatch 
+-> Search CloudWatch 
+-> Left Menu 
+-> Metrics 
+-> Classic Metrics 
+-> Select the service : EC2 
+    We will see the analytics about services 
+    for ex, ec2 -> cpu usage, etc 

@@ -1,0 +1,13 @@
+SQS - Example 
+-> Search SQS -> Queues List 
+-> Create Queue 
+-> Name: order-vs-inv
+-> Create 
+-> Send and Receive Messages 
+    Body: <Body of the message>
+    Send 
+-> Under Receive messages 
+    Poll for messages 
+
+Cleanup 
+    Delete the queue 

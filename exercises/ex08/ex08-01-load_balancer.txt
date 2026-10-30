@@ -38,5 +38,56 @@ Wait for status check
 Then open the web site in browser:
     1. http://first_instance_ip
     2. http://second_instance_ip 
+4. Target Group : tg1
+-> Left Menu -> Under Load Balancing category 
+-> Target Groups -> Create Target Group
+-> Target type: instances 
+   Target group name : tg1 
+   Protocol: HTTP 80  (Default)
+   IP address type: IPv4  (Default)
+   Protocol version: HTTP1 (Default)
+   Health checks: HTTP /
+-> Next in right bottom 
+-> Available instances (2/2)
+    Select our two instances 
+    Ports for the selected instances: 80
+    Include as Pending Below 
+
+    Review targets contains our EC2 instances 
+-> Next 
+-> Review the Summary 
+-> Create Target Group 
+
+Target Group Created now. 
+5. ALB : alb1
+-> Left Menu -> Load Balancers 
+-> DropDown of Create Load Balancer 
+    -> Compare Load Balancers Types
+    -> Create under Application Load Balancer 
+    -> name: alb1 
+       scheme: Internet-facing
+       Load balancer IP address type: IPv4 
+       Availability Zones and subnets
+        Tick all the three AZs and Subnets 
+    -> security group: site_servers_sg 
+    -> Listeners and routing
+        Listner = HTTP:80
+        Forward to target groups
+        Target group: tg1
+    -> Check Summary
+    -> Create Load Balancer 
+    Created Load Balancer
+    -> Check status of LB 
+        Status : Provisioning -> Active 
+    -> If status = Active 
+        Open the url in browser 
+        URL: http://LB_dns 
+        ie http://alb1-854507959.ap-southeast-2.elb.amazonaws.com
+6. Cleanup:
+    - Delete Load Balancer
+    - Delete Target Group 
+    - Delete Instances 
+    - Delete Security Group 
+    - Delete Key Pair 
     
 
